@@ -1,10 +1,8 @@
-## perSIM module for MarketAgents
-
-# Economic Simulation and perSIM Behavior Overview
+# perSIM module for Economic Simulation and Agent Behavior Overview
 
 ## Program Structure
 
-This program is an economic simulation module centered around a single perSIM (simulated person) living in a modest home. 
+This program is an economic simulation module centered around a single perSIM (simulated person) living in a modest home, these will be instanced for multiple agent perSIMS. 
 Uses Python and leverages Pydantic for data validation and serialization. The main components of the program are:
 
 1. **Simulation**: The core class that manages the entire simulation.
