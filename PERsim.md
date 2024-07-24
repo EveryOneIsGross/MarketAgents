@@ -134,17 +134,16 @@ graph TD
 
 # CONTEXT MEMORIES FOR PIPING INTO AGENT PROMPTS
 
-Depending on the resolution the agents need, we should use indexed search for fast recall of distant memories and can use semantic search if we want agents reflecting further back. Embedding will slow us down a lot so maybe just keyword freq search is fine. 
-**I'll also think about search more in the morning. **
+Depending on the resolution the agents need, we should use a fast indexed search for fast recall of distant memories. Embedding will slow us down a lot so maybe just keyword freq search is p fine. **I'll also think about search more in the morning. **
 
 # Agent Context Memory:
 
-1. inner_monologue: reflections on {activity_log} their {stats} and {mood}. reassess {goals}.
+1. inner_monologue: reflections on {activity_log} their {stats} and {mood}. reassess current {goals}.
 2. finance_history: {transaction_history} {account balance} {assets}
 3. social_history: {p2p chats with other agents} {chatroom/messageboard interactions}
 4. activity_log: {sims sequence of their mundane tasks} {recent_actions} {needs_stats} {mood}
 
-Has four distinct chatlogs, masking some context while emphasising others through prompting. 
+Has four distinct memory logs, masking some context while emphasising others through prompting. 
 
 # Financial Observor/and or Environment Context Memory:
 
@@ -177,6 +176,8 @@ economic_indicators: Various economic indicators relevant to the market.
 
 ---
 
+
+
 ```mermaid
 graph TD
     subgraph "Sim Memory Structure"
@@ -188,6 +189,7 @@ graph TD
         D --> A
     end
 ```
+
 ```mermaid
 graph TD
     subgraph "Observer Memory Structure"
@@ -197,6 +199,7 @@ graph TD
         G --> H[Post to Chatroom]
     end
 ```
+
 ```mermaid
 graph TD
     subgraph "Sim and Observer Interaction"
