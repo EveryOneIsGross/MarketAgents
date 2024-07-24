@@ -16,6 +16,8 @@ This program is an economic simulation module centered around a single perSIM (s
 
 ## perSIM Behavior and Mechanics
 
+![image](https://github.com/user-attachments/assets/690fa894-1762-4df4-beb2-5d0286bf019e)
+
 ### Needs System
 
 The perSim has eight fundamental needs:
