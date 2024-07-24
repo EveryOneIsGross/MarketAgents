@@ -177,7 +177,6 @@ economic_indicators: Various economic indicators relevant to the market.
 ---
 
 
-
 ```mermaid
 graph TD
     subgraph "Sim Memory Structure"
