@@ -134,7 +134,7 @@ graph TD
 
 Depending on the resolution the agents need, we should use a fast indexed search for fast recall of distant memories. Embedding will slow us down a lot so maybe just keyword freq search is p fine. **I'll also think about search more in the morning. **
 
-## Agent Context Memory:
+### Agent Context Memory:
 
 1. inner_monologue: reflections on {activity_log} their {stats} and {mood}. reassess current {goals}.
 2. finance_history: {transaction_history} {account balance} {assets}
@@ -143,14 +143,14 @@ Depending on the resolution the agents need, we should use a fast indexed search
 
 Has four distinct memory logs, masking some context while emphasising others through prompting. 
 
-## Financial Observor/and or Environment Context Memory:
+### Financial Observor/and or Environment Context Memory:
 
 1. market_history: {all_trades} {global_price} {global_supply_demand} {economic_indicators}
 2. observation_history: {market_trends} {commentary} {agent_behaviour} {market_history} {chatlogs}
 
 Has two memory tracks their previous observations and the holistic market overview.  
 
-## Trackables:
+### Trackables:
 ```
 personal_trade_history: A list of trades the agent has participated in.
 commodity_price_history: Historical prices for each commodity the agent has interacted with.
