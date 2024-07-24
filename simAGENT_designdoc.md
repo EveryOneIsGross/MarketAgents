@@ -26,19 +26,20 @@ graph TD
     P --> B
 ```
 
-This program is an economic simulation centered around a single perSIM (simulated person) living in a modest home. The simulation is built using Python and leverages Pydantic for data validation and serialization. The main components of the program are:
+This program is an economic simulation module centered around a single perSIM (simulated person) living in a modest home. 
+Uses Python and leverages Pydantic for data validation and serialization. The main components of the program are:
 
 1. **Simulation**: The core class that manages the entire simulation.
 2. **Sim**: Represents the simulated person with various needs and attributes.
 3. **House**: Represents the Sim's living space.
 4. **Market**: Simulates a economic market.
-5. **Item**: Represents objects in the house that the Sim can interact with.
+5. **Item**: Represents objects in the house that the perSim can interact with.
 
 ## Sim Behavior and Mechanics
 
 ### Needs System
 
-The Sim has eight fundamental needs:
+The perSim has eight fundamental needs:
 
 1. Hunger
 2. Hygiene
@@ -60,7 +61,7 @@ The Sim's mood is determined by the overall state of their needs:
 
 ### Decision Making
 
-The Sim makes decisions based on its current needs, mood, and environment. The decision-making process involves:
+The perSim makes decisions based on its current needs, mood, and environment. The decision-making process involves:
 
 1. Assessing the lowest need
 2. Identifying items in the house that can address that need
@@ -68,21 +69,21 @@ The Sim makes decisions based on its current needs, mood, and environment. The d
 
 ### Economic Aspects
 
-- The Sim has a limited amount of money
+- The perSim has a limited amount of money
 - Items in the house have purchase and operating costs
-- The Sim can work to earn money
+- The perSim can work to earn money
 - There's a market system where prices and quantities fluctuate
 
 ### Interactions and Activities
 
-- The Sim can interact with various items in the house (e.g., bed, fridge, shower)
+- The perSim can interact with various items in the house (e.g., bed, fridge, shower)
 - Each interaction affects one or more needs
 - Some activities (like work) can generate income but may decrease certain needs
 
 ### Automatic Behaviors
 
-- Sleep: The Sim will automatically seek rest when energy is very low
-- Purchasing: The Sim may automatically buy items if a need is critically low and they have sufficient funds
+- Sleep: The perSim will automatically seek rest when energy is very low
+- Purchasing: The perSim may automatically buy items if a need is critically low and they have sufficient funds
 
 ### Environmental Influences
 
@@ -96,15 +97,15 @@ The Sim makes decisions based on its current needs, mood, and environment. The d
    - Effect: Gradual decrease in need satisfaction, influencing mood and decisions
 
 2. **Item Interaction**
-   - Cause: Sim uses an item (e.g., fridge, bed)
+   - Cause: perSim uses an item (e.g., fridge, bed)
    - Effect: Increase in related need(s), possible decrease in others (e.g., energy)
 
 3. **Work**
-   - Cause: Sim chooses to work
+   - Cause: perSim chooses to work
    - Effect: Increases money, decreases energy, may affect other needs
 
 4. **Market Fluctuations**
-   - Cause: Sim's purchases and time passing
+   - Cause: perSim's purchases and time passing
    - Effect: Changes in item prices and availability
 
 5. **Mood Changes**
