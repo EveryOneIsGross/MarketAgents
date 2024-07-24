@@ -2,7 +2,7 @@
 
 # TLDR:
 
-perSIM is a plugin module for LLMs to help simulate their days, grounding their generations and reasoning with daily chores. Their welfare is tracked across 8 human needs, these needs are met by ITEMS that adverise their solutions to x need within their grid environment; the perSIM will automatically pursue the best item for their current need. This will augment our existing proposed Market Agents, by instigating multiple instances of perSIMs encouraging them to socialise and trade according to wlefare, mental state and needs.
+perSIM is a plugin module for LLMs to help simulate their days, grounding their generations and reasoning with self-sustainace and daily chores. Their welfare is tracked across 8 basic human needs, these needs are met by ITEMS that adverise their solutions to x need within their grid environment; the perSIM will automatically pursue the best item for their current need. This will augment our existing proposed Market Agents, by instigating multiple instances of perSIMs encouraging them to socialise and trade according to wlefare, mental state and needs.
 
 ## Program Structure
 
@@ -130,30 +130,52 @@ graph TD
     O --> P[Make Decisions]
     P --> B
 ```
+---
 
-Agent relative to the market.
+# CONTEXT MEMORIES FOR PIPING INTO AGENT PROMPTS
 
-Agent Memory:
-1. personal_trade_history: A list of trades the agent has participated in.
-2. commodity_price_history: Historical prices for each commodity the agent has interacted with.
-3. past_decisions: A record of decisions made, including context and outcomes.
-4. strategy_performance: Metrics on how well different strategies have performed.
-5. social_interactions: A record of interactions with other agents.
-6. market_beliefs: The agent's beliefs about different commodities in the market.
-7. learning_experiences: Specific scenarios where the agent has learned something.
-8. utility_history: A record of the agent's utility over time.
-9. endowment_history: How the agent's endowment has changed over time.
-10. message_history: A record of messages sent and received.
+Depending on the resolution the agents need, we should use indexed search for fast recall of distant memories and can use semantic search if we want agents reflecting further back. Embedding will slow us down a lot so maybe just keyword freq search is fine. 
+**I'll also think about search more in the morning. **
 
-Environment Memory:
-1. global_price_history: Historical prices for all commodities in the market.
-2. all_trades: A record of all trades that have occurred in the market.
-3. market_trends: Overall trends for each commodity.
-4. agent_behaviors: Summary of behaviors for each agent in the market.
-5. institution_changes: Record of changes to market institutions and their impacts.
-6. global_supply_demand: Supply and demand information for each commodity.
-7. economic_indicators: Various economic indicators relevant to the market.
+# Agent Context Memory:
 
+1. inner_monologue: reflections on {activity_log} their {stats} and {mood}. reassess {goals}.
+2. finance_history: {transaction_history} {account balance} {assets}
+3. social_history: {p2p chats with other agents} {chatroom/messageboard interactions}
+4. activity_log: {sims sequence of their mundane tasks} {recent_actions} {needs_stats} {mood}
+
+Has four distinct chatlogs, masking some context while emphasising others through prompting. 
+
+# Financial Observor/and or Environment Context Memory:
+
+1. market_history: {all_trades} {global_price} {global_supply_demand} {economic_indicators}
+2. observation_history: {market_trends} {commentary} {agent_behaviour} {market_history} {chatlogs}
+
+Has two memory tracks their previous observations and the holistic market overview.  
+
+# Trackables:
+```
+personal_trade_history: A list of trades the agent has participated in.
+commodity_price_history: Historical prices for each commodity the agent has interacted with.
+past_decisions: A record of decisions made, including context and outcomes.
+strategy_performance: Metrics on how well different strategies have performed.
+social_interactions: A record of interactions with other agents.
+market_beliefs: The agent's beliefs about different commodities in the market.
+learning_experiences: Specific scenarios where the agent has learned something.
+utility_history: A record of the agent's utility over time.
+endowment_history: How the agent's endowment has changed over time.
+message_history: A record of messages sent and received.
+global_price_history: Historical prices for all commodities in the market.
+all_trades: A record of all trades that have occurred in the market.
+market_trends: Overall trends for each commodity.
+agent_behaviors: Summary of behaviors for each agent in the market.
+institution_changes: Record of changes to market institutions and their impacts.
+global_supply_demand: Supply and demand information for each commodity.
+economic_indicators: Various economic indicators relevant to the market.
+```
+^ These are copy pasted. **I'll fuss over them in the morning.**
+
+---
 
 ```mermaid
 classDiagram
