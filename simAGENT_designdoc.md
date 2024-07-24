@@ -4,12 +4,34 @@
 
 ## Program Structure
 
-This program is an economic simulation centered around a single Sim (simulated person) living in a modest home. The simulation is built using Python and leverages Pydantic for data validation and serialization. The main components of the program are:
+```mermaid
+graph TD
+    A[Initialize PerSIM and HOUSE] --> B[Update PerSIM Stats]
+    B --> E{Choose Activity}
+    E --> |Work| F[Produce Goods]
+    E --> |Social| G[Enter Chatroom]
+    E --> |Use Item| H[Interact with Item]
+    E --> |Sleep| I[Rest and Recover]
+    F --> J[Update Inventory]
+    G --> K[Social Interaction]
+    G --> L[Trade Goods]
+    H --> M[Satisfy Needs]
+    I --> N[Restore Energy]
+    J --> O[Update Memory]
+    K --> O
+    L --> O
+    M --> O
+    N --> O
+    O --> P[Make Decisions]
+    P --> B
+```
+
+This program is an economic simulation centered around a single perSIM (simulated person) living in a modest home. The simulation is built using Python and leverages Pydantic for data validation and serialization. The main components of the program are:
 
 1. **Simulation**: The core class that manages the entire simulation.
 2. **Sim**: Represents the simulated person with various needs and attributes.
 3. **House**: Represents the Sim's living space.
-4. **Market**: Simulates a simple economic market.
+4. **Market**: Simulates a economic market.
 5. **Item**: Represents objects in the house that the Sim can interact with.
 
 ## Sim Behavior and Mechanics
