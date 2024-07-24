@@ -1,9 +1,12 @@
 # perSIM module for Economic Simulation and Agent Behavior Overview
 
+# TLDR:
+
+perSIM is a plugin module for LLMs to help simulate their days, grounding their generations and reasoning with daily chores. Their welfare is tracked across 8 human needs, these needs are met by ITEMS that adverise their solutions to x need within their grid environment; the perSIM will automatically pursue the best item for their current need. This will augment our existing proposed Market Agents, by instigating multiple instances of perSIMs encouraging them to socialise and trade according to wlefare, mental state and needs.
+
 ## Program Structure
 
-This program is an economic simulation module centered around a single perSIM (simulated person) living in a modest home, these will be instanced for multiple agent perSIMS. 
-Uses Python and leverages Pydantic for data validation and serialization. The main components of the program are:
+This program is an economic simulation module centered around a single perSIM (simulated person) living in a modest home, these will be instanced for multiple agent perSIMS. Uses Python and leverages Pydantic for data validation and serialization. The main components of the program are:
 
 1. **Simulation**: The core class that manages the entire simulation.
 2. **Sim**: Represents the simulated person with various needs and attributes.
