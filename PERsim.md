@@ -136,17 +136,17 @@ Depending on the resolution the agents need, we should use a fast indexed search
 
 ### Agent Context Memory:
 
-1. inner_monologue: reflections on {activity_log} their {stats} and {mood}. reassess current {goals}.
-2. finance_history: {transaction_history} {account balance} {assets}
-3. social_history: {p2p chats with other agents} {chatroom/messageboard interactions}
-4. activity_log: {sims sequence of their mundane tasks} {recent_actions} {needs_stats} {mood}
+1. *inner_monologue:* reflections on {activity_log} their {stats} and {mood}. reassess current {goals}.
+2. *finance_history:* {transaction_history} {account balance} {assets}
+3. *social_history:* {p2p chats with other agents} {chatroom/messageboard interactions}
+4. *activity_log:* {sims sequence of their mundane tasks} {recent_actions} {needs_stats} {mood}
 
 Has four distinct memory logs, masking some context while emphasising others through prompting. 
 
 ### Financial Observor/and or Environment Context Memory:
 
-1. market_history: {all_trades} {global_price} {global_supply_demand} {economic_indicators}
-2. observation_history: {market_trends} {commentary} {agent_behaviour} {market_history} {chatlogs}
+1. *market_history:* {all_trades} {global_price} {global_supply_demand} {economic_indicators}
+2. *observation_history:* {market_trends} {commentary} {agent_behaviour} {market_history} {chatlogs}
 
 Has two memory tracks their previous observations and the holistic market overview.  
 
