@@ -4,28 +4,6 @@
 
 ## Program Structure
 
-```mermaid
-graph TD
-    A[Initialize PerSIM and HOUSE] --> B[Update PerSIM Stats]
-    B --> E{Choose Activity}
-    E --> |Work| F[Produce Goods]
-    E --> |Social| G[Enter Chatroom]
-    E --> |Use Item| H[Interact with Item]
-    E --> |Sleep| I[Rest and Recover]
-    F --> J[Update Inventory]
-    G --> K[Social Interaction]
-    G --> L[Trade Goods]
-    H --> M[Satisfy Needs]
-    I --> N[Restore Energy]
-    J --> O[Update Memory]
-    K --> O
-    L --> O
-    M --> O
-    N --> O
-    O --> P[Make Decisions]
-    P --> B
-```
-
 This program is an economic simulation module centered around a single perSIM (simulated person) living in a modest home. 
 Uses Python and leverages Pydantic for data validation and serialization. The main components of the program are:
 
@@ -127,6 +105,28 @@ The perSim makes decisions based on its current needs, mood, and environment. Th
 9. **Sleep Behavior**
    - Cause: Very low energy
    - Effect: Forced rest, rapid energy recovery, possible neglect of other needs
+
+```mermaid
+graph TD
+    A[Initialize PerSIM and HOUSE] --> B[Update PerSIM Stats]
+    B --> E{Choose Activity}
+    E --> |Work| F[Produce Goods]
+    E --> |Social| G[Enter Chatroom]
+    E --> |Use Item| H[Interact with Item]
+    E --> |Sleep| I[Rest and Recover]
+    F --> J[Update Inventory]
+    G --> K[Social Interaction]
+    G --> L[Trade Goods]
+    H --> M[Satisfy Needs]
+    I --> N[Restore Energy]
+    J --> O[Update Memory]
+    K --> O
+    L --> O
+    M --> O
+    N --> O
+    O --> P[Make Decisions]
+    P --> B
+```
 
 Agent relative to the market.
 
