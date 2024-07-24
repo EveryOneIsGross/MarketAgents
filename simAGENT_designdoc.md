@@ -13,7 +13,7 @@ Uses Python and leverages Pydantic for data validation and serialization. The ma
 4. **Market**: Simulates a economic market.
 5. **Item**: Represents objects in the house that the perSim can interact with.
 
-## Sim Behavior and Mechanics
+## perSIM Behavior and Mechanics
 
 ### Needs System
 
@@ -28,7 +28,7 @@ The perSim has eight fundamental needs:
 7. Environment
 8. Comfort
 
-Each need is represented by a value from 0 (completely unsatisfied) to 10 (fully satisfied). These needs decay over time and drive the Sim's behavior.
+Each need is represented by a value from 0 (completely unsatisfied) to 10 (fully satisfied). These needs decay over time and drive the perSim's behavior.
 
 ### Mood
 
