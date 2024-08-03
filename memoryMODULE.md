@@ -78,6 +78,10 @@ Initial Considerations:
     - use smart context windows
     - fast low compute search fall back for out of range memory recall
 
+- tools
+
+    - embeddings, indexing, db of choice, search methods (keyword indexing, graph db, semantic), chunking methods
+
 - step based timeline considerations
   
     -  what resolution context per 'step'
