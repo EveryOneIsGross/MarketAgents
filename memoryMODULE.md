@@ -70,6 +70,14 @@ graph TD
 Build a working single agent to build up a AgentMemory framework to refine for scale. 
 Work in with other modules db preferences. 
 
+Initial Considerations:
+
+- conserve tokens
+    - find the most robust but concise instruction language for context acquistion
+    - use smart context windows
+    - fast low compute search fall back for out of range memory recall
+
+  
 # MarketAgents Memory Implementation: To-Do List
 
 1. **Agent Memory Implementation**
