@@ -73,10 +73,25 @@ Work in with other modules db preferences.
 Initial Considerations:
 
 - conserve tokens
+  
     - find the most robust but concise instruction language for context acquistion
     - use smart context windows
     - fast low compute search fall back for out of range memory recall
 
+- step based timeline considerations
+  
+    -  what resolution context per 'step'
+    -  relevance of 'context' on agents reasoning trejectory
+    -  how many turns in a 'step' for the agent, 0-shot or multiturn CoT, etc
+
+- will the chosen prompt schema, token limit, retrieved context 'work' on the smallest llms and on big dog llms
+  
+    - style and formatting will affect llm flow
+
+- llm as judge
+    
+    - consider how we'll score relevance
+    - is the context ingestion stage 0-shot or multiturn etc 
   
 # MarketAgents Memory Implementation: To-Do List
 
